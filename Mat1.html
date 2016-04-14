@@ -3,30 +3,44 @@
 	<title>Programa para determinar si es o no primo</title>
 	<link rel="stylesheet" href="Css/Style.css" />
 	</head>
-	<body>
-		<script type="text/javascript">
-
-	function esprimo(num){
-		var primo;
-		primo=true;
-		for(var i=2;i<num-1;i++){
-			if (num%i==0) {
-				primo=false;
-				break;
+	<h1 align="center">Primeros 100 Numeros primos</h1>
+	<br><br><br><br><body>
+		<br><br><br><br><script type="text/javascript">
+		function primo(number){
+		var ac=0;
+		if (number==1 || number==2 || number==3) 
+		{
+			return 1;
+		}
+		else
+		{
+			for (var i=1;i<=number;i++){
+				if(number%i==0)
+					ac++;
+				}
+				if(ac<=2)
+					return 1;
+				
+				else
+					return 0;
 			}
 		}
-		return primo;
-	}
-
-	var numero=parseInt(prompt("Introducir un numero"));
-	if (esprimo(numero)) {
-		alert("EL NUMERO INTRODUCIDO ..:: ES PRIMO ::..");
-	} else {
-		alert("EL NUMERO INTRODUCIDO ..:: NO ES PRIMO ::..");
-	};
+		var j;
+		var ii=1;
+		var k=1;
+		while (k<=100)
+		{
+			j=parseInt(primo(ii));
+			if(j==1){
+				document.write(ii+ " "+ " - ");
+				k++;
+			}
+			ii++;
+		}	
 	</script>
-	<h1><center>
-	 ..::  BIENVENIDO A GIT  ::.. 
-	</center></h1>
+	<br><br><br><br>
+	<h1>..::  BIENVENIDO A GIT  ::.. </h1>
+	 
+
 	</body>
 </html>
